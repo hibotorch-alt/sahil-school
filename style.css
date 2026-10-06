@@ -1,0 +1,322 @@
+/* ضبط الخط العام والألوان الفاخرة */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: #f8fafc;
+    direction: rtl;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* خلفية حركية متدرجة أنيقة */
+.bg-glow {
+    position: fixed;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle at 30% 30%, rgba(99, 102, 241, 0.25), transparent 40%),
+                radial-gradient(circle at 70% 70%, rgba(168, 85, 247, 0.2), transparent 40%);
+    z-index: -1;
+    animation: pulseGlow 8s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+    0% { transform: scale(1) rotate(0deg); }
+    100% { transform: scale(1.08) rotate(3deg); }
+}
+
+/* الهيدر */
+.main-header {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+.logo-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    margin-bottom: 12px;
+}
+
+.main-header h1 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    background: linear-gradient(to right, #ffffff, #cbd5e1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main-header p {
+    color: #94a3b8;
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+/* بطاقات التعديل الزجاجية Glassmorphism */
+.container {
+    max-width: 650px;
+    margin: 20px auto 50px;
+    padding: 0 20px;
+}
+
+.glass-card {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.registration-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+    color: #38bdf8;
+}
+
+/* تقسيم الحقول */
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #e2e8f0;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+    outline: none;
+    background: rgba(15, 23, 42, 0.9);
+}
+
+.form-group select option, .form-group select optgroup {
+    background-color: #1e293b;
+    color: #fff;
+}
+
+/* خانات الخيارات العصرية */
+.form-section {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    background: rgba(15, 23, 42, 0.3);
+}
+
+.form-section legend {
+    padding: 0 10px;
+    color: #38bdf8;
+    font-weight: 700;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.checkbox-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.25s ease;
+}
+
+.checkbox-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(56, 189, 248, 0.4);
+    transform: translateY(-2px);
+}
+
+.checkbox-card.mental-math {
+    grid-column: 1 / -1;
+    background: rgba(168, 85, 247, 0.15);
+    border-color: rgba(168, 85, 247, 0.3);
+}
+
+.checkbox-card.mental-math:hover {
+    background: rgba(168, 85, 247, 0.25);
+}
+
+/* الزر التفاعلي المبتكر */
+.btn-fancy {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #0284c7, #6366f1, #a855f7);
+    background-size: 200% 200%;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+}
+
+.btn-fancy:hover {
+    background-position: right center;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(168, 85, 247, 0.5);
+}
+
+/* تصميم البطاقة الجاهزة */
+.hidden {
+    display: none;
+}
+
+.receipt-card {
+    border: 2px solid #38bdf8;
+    position: relative;
+    overflow: hidden;
+}
+
+.receipt-header {
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.receipt-header h2 {
+    color: #38bdf8;
+    font-size: 1.8rem;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.highlight-text {
+    color: #38bdf8;
+    font-weight: 700;
+}
+
+.courses-box {
+    margin-top: 15px;
+    background: rgba(15, 23, 42, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.courses-box ul {
+    margin-right: 25px;
+    margin-top: 8px;
+    color: #a855f7;
+}
+
+.receipt-footer-info {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.status-badge {
+    background: rgba(34, 197, 94, 0.2);
+    color: #4ade80;
+    padding: 4px 12px;
+    border-radius: 15px;
+    border: 1px solid #22c55e;
+}
+
+.receipt-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn-action {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-action.print {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+.btn-action.reset {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.btn-action:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* متجاوب مع الهواتف */
+@media (max-width: 500px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* أسلوب الطباعة */
+@media print {
+    body { background: #fff; color: #000; }
+    .bg-glow, .main-header, .receipt-actions { display: none; }
+    .receipt-card { border: 2px solid #000; background: #fff; color: #000; box-shadow: none; }
+    .receipt-header h2, .highlight-text { color: #000; }
+    .courses-box { background: #f0f0f0; color: #000; }
+    .courses-box ul { color: #000; }
+    .status-badge { border-color: #000; color: #000; }
+}
