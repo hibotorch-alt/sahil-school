@@ -3,167 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sahil School - التسجيل الإلكتروني</title>
-    <!-- استدعاء خط Cairo الأنيق من Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <!-- منع الكاش لضمان تحديث التعديلات فوراً للزوار -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <title>تسجيل الطلاب - Sahil School</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- خلفية حركية ضوئية -->
-    <div class="bg-glow"></div>
+    <div class="container">
+        <h2>استمارة التسجيل في مدرسة Sahil School</h2>
+        <p>يرجى ملء كافة البيانات التالية لإتمام عملية التسجيل:</p>
 
-    <header class="main-header">
-        <div class="logo-badge">Sahil School</div>
-        <h1>مدرسة الساحل للغات والحساب الذهني</h1>
-        <p>بوابتك نحو التميز العلمي واللغوي</p>
-    </header>
-
-    <main class="container">
-        <!-- نموذج التسجيل -->
-        <form id="registrationForm" class="glass-card registration-form">
-            <h2>استمارة التسجيل الإلكترونية</h2>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="firstname">الاسم:</label>
-                    <input type="text" id="firstname" required placeholder="أدخل اسمك الشخصي">
-                </div>
-                <div class="form-group">
-                    <label for="lastname">اللقب:</label>
-                    <input type="text" id="lastname" required placeholder="أدخل لقبك">
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="phone">رقم الهاتف:</label>
-                    <input type="tel" id="phone" required placeholder="06XXXXXXXX">
-                </div>
-                <div class="form-group">
-                    <label for="email">البريد الإلكتروني (Gmail):</label>
-                    <input type="email" id="email" required placeholder="example@gmail.com">
-                </div>
-            </div>
-
-            <!-- تفصيل جميع المستويات والسنوات الدراسية -->
+        <form id="registrationForm">
             <div class="form-group">
-                <label for="educationLevel">المستوى والسنة الدراسية:</label>
-                <select id="educationLevel" required>
-                    <option value="" disabled selected>-- اختر مستواك الدراسي بوضوح --</option>
-                    
-                    <optgroup label="التعليم الابتدائي">
-                        <option value="السنة الأولى ابتدائي">السنة الأولى ابتدائي</option>
-                        <option value="السنة الثانية ابتدائي">السنة الثانية ابتدائي</option>
-                        <option value="السنة الثالثة ابتدائي">السنة الثالثة ابتدائي</option>
-                        <option value="السنة الرابعة ابتدائي">السنة الرابعة ابتدائي</option>
-                        <option value="السنة الخامسة ابتدائي">السنة الخامسة ابتدائي</option>
-                    </optgroup>
+                <label for="firstName">الاسم الأول:</label>
+                <input type="text" id="firstName" name="firstName" required placeholder="أدخل الاسم الأول">
+            </div>
 
-                    <optgroup label="التعليم المتوسط">
-                        <option value="السنة الأولى متوسط">السنة الأولى متوسط</option>
-                        <option value="السنة الثانية متوسط">السنة الثانية متوسط</option>
-                        <option value="السنة الثالثة متوسط">السنة الثالثة متوسط</option>
-                        <option value="السنة الرابعة متوسط (BAM)">السنة الرابعة متوسط (BEM)</option>
-                    </optgroup>
+            <div class="form-group">
+                <label for="lastName">اللقب:</label>
+                <input type="text" id="lastName" name="lastName" required placeholder="أدخل اللقب">
+            </div>
 
-                    <optgroup label="التعليم الثانوي">
-                        <option value="السنة الأولى ثانوي">السنة الأولى ثانوي</option>
-                        <option value="السنة الثانية ثانوي">السنة الثانية ثانوي</option>
-                        <option value="السنة الثالثة ثانوي (باكالوريا)">السنة الثالثة ثانوي (باكالوريا)</option>
-                    </optgroup>
+            <div class="form-group">
+                <label for="phone">رقم الهاتف:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="06XXXXXXXX">
+            </div>
 
-                    <optgroup label="التعليم الجامعي">
-                        <option value="ليسانس (L1 / L2 / L3)">جامعي - ليسانس</option>
-                        <option value="ماستر (M1 / M2)">جامعي - ماستر</option>
-                        <option value="دكتوراه">جامعي - دكتوراه</option>
-                    </optgroup>
+            <div class="form-group">
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" required placeholder="example@gmail.com">
+            </div>
 
-                    <optgroup label="فئات أخرى">
-                        <option value="متربص / عامل">متربص / موظف</option>
-                        <option value="غير ذلك">غير ذلك</option>
-                    </optgroup>
+            <div class="form-group">
+                <label for="level">المستوى الدراسي:</label>
+                <select id="level" name="level" required>
+                    <option value="" disabled selected>اختر المستوى</option>
+                    <option value="ابتداءي">ابتدائي</option>
+                    <option value="متوسط">متوسط</option>
+                    <option value="ثانوي">ثانوي</option>
+                    <option value="جامعي">جامعي / عام</option>
                 </select>
             </div>
 
-            <!-- خيارات اللغات والحساب الذهني -->
-            <fieldset class="form-section">
-                <legend>الدورات التدريبية المتاحة:</legend>
-                <div class="checkbox-grid">
-                    <label class="checkbox-card">
-                        <input type="checkbox" name="courses" value="الإنجليزية (English)">
-                        <span>🇬🇧 الإنجليزية (English)</span>
-                    </label>
-                    <label class="checkbox-card">
-                        <input type="checkbox" name="courses" value="الفرنسية (Français)">
-                        <span>🇫🇷 الفرنسية (Français)</span>
-                    </label>
-                    <label class="checkbox-card">
-                        <input type="checkbox" name="courses" value="الإسبانية (Español)">
-                        <span>🇪🇸 الإسبانية (Español)</span>
-                    </label>
-                    <label class="checkbox-card">
-                        <input type="checkbox" name="courses" value="الألمانية (Deutsch)">
-                        <span>🇩🇪 الألمانية (Deutsch)</span>
-                    </label>
-                    <label class="checkbox-card mental-math">
-                        <input type="checkbox" name="courses" value="الحساب الذهني (Mental Math)">
-                        <span>🧮 الحساب الذهني (Mental Math)</span>
-                    </label>
-                </div>
-            </fieldset>
+            <div class="form-group">
+                <label for="courses">الدورة المطلوبة:</label>
+                <input type="text" id="courses" name="courses" required placeholder="مثال: لغات، دعم، برمجة...">
+            </div>
 
-            <button type="submit" class="btn-fancy">
-                <span>تأكيد التسجيل الآن</span>
-            </button>
+            <button type="submit" id="submitBtn">تسجيل الآن</button>
         </form>
+    </div>
 
-        <!-- بطاقة التسجيل الجاهزة الفاخرة -->
-        <div id="receiptCard" class="glass-card receipt-card hidden">
-            <div class="receipt-header">
-                <div class="watermark-logo">Sahil School</div>
-                <h2>بطاقة تسجيل رسمية</h2>
-                <p>مدرسة الساحل للغات والحساب الذهني</p>
-            </div>
-            
-            <div class="receipt-body">
-                <div class="info-row">
-                    <span><strong>الاسم واللقب:</strong></span>
-                    <span id="resFullName" class="highlight-text"></span>
-                </div>
-                <div class="info-row">
-                    <span><strong>رقم الهاتف:</strong></span>
-                    <span id="resPhone"></span>
-                </div>
-                <div class="info-row">
-                    <span><strong>البريد الإلكتروني:</strong></span>
-                    <span id="resEmail"></span>
-                </div>
-                <div class="info-row">
-                    <span><strong>المستوى والسنة الدراسية:</strong></span>
-                    <span id="resEducation"></span>
-                </div>
-
-                <div class="courses-box">
-                    <strong>الدورات المسجلة:</strong>
-                    <ul id="resCourses"></ul>
-                </div>
-
-                <div class="receipt-footer-info">
-                    <p><strong>تاريخ التسجيل:</strong> <span id="resDate"></span></p>
-                    <p class="status-badge">حالة الطلب: مؤكد مبدئياً ✓</p>
-                </div>
-            </div>
-
-            <div class="receipt-actions">
-                <button onclick="window.print()" class="btn-action print">طباعة البطاقة</button>
-                <button onclick="resetForm()" class="btn-action reset">تسجيل طالب جديد</button>
-            </div>
-        </div>
-    </main>
-
+    <!-- استدعاء ملف الجافاسكربت -->
     <script src="script.js"></script>
 </body>
 </html>
